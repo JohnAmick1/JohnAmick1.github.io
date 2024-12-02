@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>NFLdb</title>
+</head>
+<body>
+    <div class="project-homepage">
+      <div id="top"></div>
+        <div class="back-and-home">
+            <a href="javascript:history.back()" class="back-button" title="Go Back">
+                <i class="material-icons">arrow_back</i>
+              </a>
+              <a href="/index.html" class="home-button" title="Home">
+                <i class="material-icons">home</i>
+              </a>
+        </div>
+        <div class="header-and-summary">
+            <h1>NFL Play-by-Play Analysis with Java and JDBC</h1>
+            <p>
+              The NFL database analyzes play-by-play data to uncover trends in player performance, 
+              team strategies, and game dynamics. It highlights patterns such as play type effectiveness, 
+              player contributions, and situational tendencies, providing actionable insights for a deeper 
+              understanding of the sport at a granular level. 
+            </p>
+        </div>
+        <div class="bottom-navbar">
+            <a href="#AT_A_GLANCE">AT A GLANCE</a>
+            <a href="#F_AND_W">FRAMEWORK AND WORKFLOW</a>
+            <a href="#N_AND_B">NUTS AND BOLTS</a>
+            <a href="#C_AND_D">CONNECTION AND DATA</a>
+            <a href="#FUTURE">FUTURE</a>
+          </div>
+          <div class="center-container"><i class="material-icons bouncing-arrow">arrow_drop_down</i></div>
+    </div>
+
+    <hr class="centered-hr">
+
+    <section id="AT_A_GLANCE" class="project-section">
+        <div class="split-section">
+          <div class="section-left">
+            <video autoplay muted loop playsinline width="100%" height="auto">
+                <source src="../../videos/jallen.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <video autoplay muted loop playsinline width="100%" height="auto">
+                <source src="../../videos/eagles.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+          </div>
+          <div class="section-right">
+            <header id="framework" class="sec-header"><h1>AT A GLANCE</h1></header>
+            <p style="margin-left: 30px;">Key insights into player performance are revealed through a function that analyzes
+                a quarterback's completion rate by field area, highlighting the top target for each zone. 
+                For example, Josh Allen has a high number of pass attempts deep right and deep left, despite
+                a low success rate in those areas.</p>
+                <br><br>
+            <p style="margin-left: 30px;">
+                Beyond individual statistics, specific trends emerge in less commonly analyzed scenarios.
+                The "first play from scrimmage" function shows the Eagles consistently turning to
+                Saquon Barkley for their first offensive play of the second half,
+                whether through a pass or a run.</p>
+                <br><br>
+            <p style="margin-left: 30px; font-size: 14px; font-style: italic;"> * The displayed output is based on data from up to Week 9 of the 2024-2025 NFL season, although the database is updated weekly for up-to-date analysis.</p>
+          </div>
+        </div>
+    </section>
+
+    <hr class="centered-hr">
+
+    <section id="F_AND_W" class="project-section">
+        <div class="split-section">
+            <div class="section-left">
+                <video id="draw-d" autoplay muted loop playsinline width="100%" height="auto">
+                    <source src="../../videos/drawdiagram.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+          <div class="section-right">
+            <header id="framework" class="sec-header"><h1>FRAMEWORK AND WORKFLOW</h1></header>
+            <p>
+                The Analytics class dynamically determines and executes specific analyses like team,
+                player, or game insights based on user input. 
+                Each analysis class encapsulates its tasks, querying the database for relevant data, 
+                which is processed by a DataProcessor to apply Java logic and structured by a DataTable 
+                for easy consumption. <br><br>Results are returned to the central Analytics class and displayed 
+                to the user via a dedicated Display module. This modular design keeps tasks well-organized, 
+                encapsulated, and ensures flexibility, scalability, and maintainability.</p>
+          </div>
+        </div>
+    </section>
+
+    <hr class="centered-hr">
+
+    <section id="N_AND_B" class="project-section">
+        <div class="split-section">
+          <div class="section-left">
+            <img src="../../images/method-screenshot.jpg" alt="Description of the image"/>
+          </div>
+          <div class="section-right">
+            <header id="nuts-and-bolts" class="sec-header"><h1>NUTS AND BOLTS</h1></header>
+            <p style="margin-left: 30px;">The  <span style="font-weight: bold; font-style: italic;">firstPlayFromScrimmage</span>  method uses a parameterized SQL query to filter plays by team, 
+                quarter, and play types (`RUSH`, `PASS`, `SCRAMBLE`). The query results are processed with
+                Java streams, grouping plays by `GameDate` and selecting the play with the highest 
+                `Minute` in each group using `Collectors.maxBy`. Additional metrics, like pass percentage, 
+                are calculated with `DataProcessor.passPercentage` and appended to the dataset. The final result 
+                is organized in a `DataTable`, maintaining consistency for further processing or display.</p>
+          </div>
+        </div>
+    </section>
+
+    <hr class="centered-hr">
+
+    <section id="C_AND_D" class="project-section">
+        <div class="split-section">
+          <div class="section-left">
+            <video autoplay muted loop playsinline width="100%" height="auto">
+              <source src="../../videos/terminal.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="section-right">
+            <header id="data" class="sec-header"><h1>CONNECTION AND DATA</h1></header>
+            <p style="margin-left: 30px;">The Connections class manages database connectivity by opening a JDBC connection, maintaining
+                the connection object, and securely disconnecting when operations are complete.
+                <br><br>
+                Data is manually imported from a CSV file into the database, with plays broken into 41 columns,
+                including key fields such as Description, Penalties, and Yard Lines, among others. Over 50,000 rows 
+                of data are processed in under two seconds.</p>
+          </div>
+        </div>
+    </section>
+
+    <hr class="centered-hr">
+
+    <div id = "FUTURE" class="project-bottom">
+      <div class="column">
+        <p style="padding-bottom: 20px; font-weight: 100">FUTURE ENHANCMENTS</p>
+          <p style = "padding-left: 7%;"> -> A machine learning model to predict player performance and game outcome.
+           <br> -> Enable side-by-side comparisons of players or teams across multiple metrics for detailed analysis.
+           <br> -> Interactive Dashboard -  interface with charts, graphs, and tables to visualize data intuitively.
+           <br> -> A system to automatically fetch and import weekly CSV file. </p>
+      </div>
+      
+      <div class="column">Any questions?<br><br> <a href="mailto:johnamick3@gmail.com">Shoot me an email!</a></div>
+     
+      <div class="column">
+        <a href="javascript:void(0);" class="back-to-top" onclick="scrollToTop()">
+          Back to the top 
+          <i class="material-icons">arrow_upward</i>
+        </a>
+      </div>
+    </div>
+
+    <script src="../../script.js"></script>    <!-- SCRIPT -->
+
+</body>
+</html>

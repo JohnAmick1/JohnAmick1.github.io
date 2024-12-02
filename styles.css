@@ -1,0 +1,377 @@
+/* ---------------- FONTS ---------------- */ 
+
+@font-face {
+    font-family: 'Inter';
+    src: url('fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/* ------------- UNIVERSALS ------------- */ 
+
+:root {
+    --off-white: rgb(254, 254, 242);
+    --dirty-orange: rgb(200, 111, 63);
+    --pfs: 16px; 
+    --dust-yellow: rgb(207, 170, 85);
+}
+
+body {
+    background-color: black;
+    opacity: 0;
+    transition: opacity 1s ease-in-out; 
+}
+
+.centered-hr {
+  width: 50%; 
+  margin: 20px auto;
+  border: 0; 
+  height: 2px;
+  background-color: rgb(150, 145, 145);
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+p {
+    white-space: normal; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h2 {
+    margin: 10%;
+}
+
+/* ------------- INDEX ------------- */ 
+
+.index-home {
+    height: 100vh; 
+    width: 100%;
+    overflow: hidden; 
+  }
+
+.top-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+    padding: 30px;
+    margin-top: 10px;
+}
+.index-home .top-grid .my-links a {
+  text-decoration: none; 
+  color: inherit; 
+  transition: text-decoration 0.3s ease; 
+}
+
+.index-home .top-grid .my-links a:hover {
+  text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.dcc p {
+    font-size: 150px;
+    margin-left: 1%;
+    margin-top: 9%;
+    white-space: nowrap; 
+}
+
+.dcc p .breathe {
+    animation: letter-breathe 7s ease-in-out infinite;
+    font-variation-settings: 'wght' 100;
+    font-size: 150px;
+}
+
+nav a img {
+    transition: 0.3s ease; 
+}
+
+nav a:hover img {
+    filter: brightness(0.8) blur(2px); 
+    transform: scale(1.05); 
+}
+
+/* ------------- PROJECT GRID ------------- */ 
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+    max-width: 100%; 
+    overflow-x: hidden; 
+    margin: 0 auto; 
+    box-sizing: border-box; 
+}
+
+.projects-grid img {
+    width: 100%; 
+    height: auto; 
+    display: block;
+    max-height: 90vh;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .projects-grid img:hover {
+    transform: scale(1.01); 
+  }
+
+
+/* ------------- NFLdb ------------- */ 
+
+.project-homepage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box; 
+    height: 100vh;
+    position: relative; 
+  }
+
+  .project-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 10%;
+    min-height: auto;
+}
+
+.split-section {
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.section-left,
+.section-right {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    flex: 1; 
+    max-width: 50%; 
+}
+
+.section-left img {
+    max-width: 100%; 
+    height: auto;  
+    object-fit: contain;
+}
+
+.section-right {
+    margin-left: 0;
+}
+
+.section-right p {
+    display: block;
+}
+
+.sec-header h1 {
+    margin-bottom: 20%;
+    font-size: 26px;
+    color:rgb(205, 98, 92);
+    font-weight: bold;
+}
+
+.project-bottom {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  gap: 20px;
+}
+
+.project-bottom .column {
+  padding: 40px; 
+}
+
+.back-to-top {
+  display: inline-flex; 
+  align-items: center; 
+  text-decoration: none; 
+  color: inherit;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  padding: 5px 10px; 
+  border-radius: 5px; 
+}
+
+.back-to-top i {
+  margin-left: 15px; 
+  animation: bobbing 1s infinite;
+}
+
+.back-to-top:hover {
+  transform: scale(1.1); 
+}
+  
+  .header-and-summary {
+    text-align: center;
+    max-width: 800px; 
+    margin: 0 auto; 
+    margin-top: 10%;
+    padding: 20px; 
+  }
+  
+  .header-and-summary h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px; 
+    font-weight: 500;
+  }
+  
+  .header-and-summary p {
+    font-size: 1.2rem; 
+    line-height: 1.6; 
+    margin-top: 6%;
+  }
+
+
+  .back-and-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 3%;
+  }
+  
+  .back-button,
+  .home-button {
+    text-decoration: none; 
+    font-size: 24px; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+  }
+  
+  .back-button:hover,
+  .home-button:hover {
+    transform: scale(1.3); 
+  }
+
+  .bottom-navbar {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    margin: 5% 9%;
+
+  }
+  
+  .bottom-navbar a {
+    display: block; 
+    text-decoration: none; 
+    font-size: 14px;
+    font-weight: 100;
+
+  }
+  
+  .bottom-navbar a:hover {
+    text-decoration: underline; 
+  }
+
+  .bouncing-arrow {
+    font-size: 48px; 
+    animation: bobbing 1.5s infinite;
+  }
+  .center-container {
+    position: absolute;
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
+
+
+/* ------------- Me ------------- */ 
+
+.me {
+  height: 100vh; 
+  width: 100vw; 
+}
+
+.me .back {
+  padding: 4%;
+  display: inline-block; 
+}
+
+.me .back .material-icons {
+  transition: transform 0.3s ease; 
+}
+
+.me .back .material-icons:hover {
+  transform: scale(1.2); 
+}
+
+.me .grid .left a {
+  color: #e90e49;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease; 
+}
+
+.me .grid .left a:hover {
+  color: #ff2c64; 
+}
+
+.me .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem; 
+}
+
+.me .grid .right {
+  display: flex;
+  justify-content: center; 
+  overflow: hidden;
+  align-items: center;
+}
+
+.me .grid .left {
+  margin-left: 7%;
+  line-height: 1.6;
+  padding: 20%;
+}
+
+.me .grid .right img {
+  max-width: 90%; 
+  max-height: 80vh; 
+  object-fit: contain; 
+}
+
+
+
+  
+@keyframes bobbing {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px); 
+    }
+  }
+
+@keyframes letter-breathe {
+    from,
+    to {
+        font-variation-settings: 'wght' 400;
+    }
+
+    50% {
+        font-variation-settings: 'wght' 700;
+    }
+}
