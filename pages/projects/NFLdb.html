@@ -20,7 +20,7 @@
               </a>
         </div>
         <div class="header-and-summary">
-            <h1>NFL Play-by-Play Analysis with Java and JDBC</h1>
+            <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; color: beige;">NFL Play-by-Play Analysis with Java and JDBC</h1>
             <p>
               The NFL database analyzes play-by-play data to uncover trends in player performance, 
               team strategies, and game dynamics. It highlights patterns such as play type effectiveness, 
@@ -53,8 +53,8 @@
               </video>
           </div>
           <div class="section-right">
-            <header id="framework" class="sec-header"><h1>AT A GLANCE</h1></header>
-            <p style="margin-left: 30px;">Key insights into player performance are revealed through a function that analyzes
+            <p style="margin-left: 30px;"><span style ="font-weight: 400; color:rgb(205, 98, 92);">AT A GLANCE</span><br><br> 
+               Key insights into player performance are revealed through a function that analyzes
                 a quarterback's completion rate by field area, highlighting the top target for each zone. 
                 For example, Josh Allen has a high number of pass attempts deep right and deep left, despite
                 a low success rate in those areas.</p>
@@ -81,8 +81,7 @@
                 </video>
             </div>
           <div class="section-right">
-            <header id="framework" class="sec-header"><h1>FRAMEWORK AND WORKFLOW</h1></header>
-            <p>
+            <p> <span style ="font-weight: 400; color:rgb(205, 98, 92);">FRAMEWORK AND WORKFLOW</span><br><br> 
                 The Analytics class dynamically determines and executes specific analyses like team,
                 player, or game insights based on user input. 
                 Each analysis class encapsulates its tasks, querying the database for relevant data, 
@@ -99,11 +98,11 @@
     <section id="N_AND_B" class="project-section">
         <div class="split-section">
           <div class="section-left">
-            <img src="../../images/method-screenshot.jpg" alt="Description of the image"/>
+            <img src="../../images/method-screenshot.jpg" alt="method"/>
           </div>
           <div class="section-right">
-            <header id="nuts-and-bolts" class="sec-header"><h1>NUTS AND BOLTS</h1></header>
-            <p style="margin-left: 30px;">The  <span style="font-weight: bold; font-style: italic;">firstPlayFromScrimmage</span>  method uses a parameterized SQL query to filter plays by team, 
+            <p style="margin-left: 30px;"><span style ="font-weight: 400; color:rgb(205, 98, 92);">NUTS AND BOLTS</span><br><br> 
+                The<span style="font-weight: bold; font-style: italic;">firstPlayFromScrimmage</span>  method uses a parameterized SQL query to filter plays by team, 
                 quarter, and play types (`RUSH`, `PASS`, `SCRAMBLE`). The query results are processed with
                 Java streams, grouping plays by `GameDate` and selecting the play with the highest 
                 `Minute` in each group using `Collectors.maxBy`. Additional metrics, like pass percentage, 
@@ -124,8 +123,8 @@
             </video>
           </div>
           <div class="section-right">
-            <header id="data" class="sec-header"><h1>CONNECTION AND DATA</h1></header>
-            <p style="margin-left: 30px;">The Connections class manages database connectivity by opening a JDBC connection, maintaining
+            <p style="margin-left: 30px;"><span style ="font-weight: 400; color:rgb(205, 98, 92);">CONNECTION AND DATA</span><br><br>
+                The Connections class manages database connectivity by opening a JDBC connection, maintaining
                 the connection object, and securely disconnecting when operations are complete.
                 <br><br>
                 Data is manually imported from a CSV file into the database, with plays broken into 41 columns,

@@ -23,7 +23,7 @@ body {
 }
 
 .centered-hr {
-  width: 50%; 
+  width: 80%; 
   margin: 20px auto;
   border: 0; 
   height: 2px;
@@ -173,6 +173,7 @@ nav a:hover img {
     align-items: center;
     flex: 1; 
     max-width: 50%; 
+
 }
 
 .section-left img {
