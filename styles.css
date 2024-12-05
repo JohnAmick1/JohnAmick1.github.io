@@ -55,6 +55,10 @@ h2 {
     margin: 10%;
 }
 
+.projects-container {
+  margin-top: 50px;
+}
+
 /* ------------- INDEX ------------- */ 
 
 .index-home {
@@ -148,15 +152,28 @@ nav a:hover img {
     padding: 20px;
     box-sizing: border-box; 
     height: 100vh;
-    position: relative; 
+    position: relative;
+    z-index: 1; 
   }
 
-  .project-section {
+body.pf {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+.project-section {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 50px 10%;
     min-height: auto;
+}
+
+.projects-container {
+  min-height: 100vh; 
+  position: relative; 
+  z-index: 0; 
+  padding: 20px; 
 }
 
 .split-section {

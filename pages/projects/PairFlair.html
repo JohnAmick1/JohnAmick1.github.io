@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <title>PairFlair</title>
 </head>
-<body>
+<body class = "pf">
     <div class="project-homepage">
         <div id="top"></div>
           <div class="back-and-home">
@@ -21,13 +21,10 @@
           </div>
           <div class="header-and-summary">
               <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif;  color: beige;">Food and Alcoholic Beverage Pairing App in Flutter </h1>
-              <p> 
-                Designed as a mobile application, Pair Flair recommends pairings between various food dishes and alcoholic beverages, 
-                including cocktails, wines, and beers. Developed as part of a full-stack team project, it serves as a concept app showcasing 
-                how a pairing recommendation platform could function effectively. While the current version focuses on functionality and user 
-                experience, future enhancements aim to incorporate more in-depth data through advanced APIs to provide even richer pairing insights. 
-                Pair Flair offers a unique perspective on the hospitality dining culture, enriching the culinary experience for both diners 
-                and professionals alike.
+              <p>Pair Flair is a mobile app developed as part of a full-stack team project, 
+                recommending food and drink pairings like cocktails, wines, and beers. 
+                It combines functionality with user experience to showcase how pairing 
+                platforms can enrich dining culture.
               </p>
           </div>
           <div class="bottom-navbar">
@@ -39,160 +36,160 @@
         <div class="center-container"><i class="material-icons bouncing-arrow">arrow_drop_down</i></div>
     </div>
 
-    <p><span style ="font-weight: 400; color:rgb(205, 98, 92); text-align: center;">FEATURES</span></p>
-    <section id="onboarding" class="project-section">
+    <div class = projects-container>
+      <p><span style ="font-weight: 400; color:rgb(205, 98, 92); text-align: center;">FEATURES</span></p>
+      <section id="onboarding" class="project-section">
+          <div class="split-section">
+            <div class="section-left">
+              <video autoplay muted loop playsinline width="70%" height="auto">
+                <source src="../../videos/onboarding_screen.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="section-right">
+                <p><span style ="font-weight: 100;">ONBOARDING SCREEN</span><br><br>Welcome
+                  users with a brief and inviting message about the exciting possibilities
+                  of their wine-and-dine journey, while also promoting responsible drinking habits.</p>
+            </div>
+          </div>
+      </section>
+      <section id="features" class="project-section">
         <div class="split-section">
           <div class="section-left">
             <video autoplay muted loop playsinline width="70%" height="auto">
-              <source src="../../videos/onboarding_screen.mp4" type="video/mp4">
+              <source src="../../videos/features.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
           <div class="section-right">
-              <p><span style ="font-weight: 100;">ONBOARDING SCREEN</span><br><br>Welcome
-                users with a brief and inviting message about the exciting possibilities 
-                of their wine-and-dine journey, while also promoting responsible drinking habits.</p>
+            <p><span style ="font-weight: 100;">FEATURED PAIRINGS SLIDER</span><br><br>Showcase themed food and
+              beverage pairings—highlight popular favorites and unique combinations to inspire
+              users to explore new experiences.</p>
           </div>
         </div>
-    </section>
-
-    <section id="features" class="project-section">
+        </section>
+      
+        <section id="searching" class="project-section">
       <div class="split-section">
         <div class="section-left">
           <video autoplay muted loop playsinline width="70%" height="auto">
-            <source src="../../videos/features.mp4" type="video/mp4">
+            <source src="../../videos/searching_feature.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
         </div>
         <div class="section-right">
-          <p><span style ="font-weight: 100;">FEATURED PAIRINGS SLIDER</span><br><br>Showcase themed food and 
-            beverage pairings—highlight popular favorites and unique combinations to inspire 
-            users to explore new experiences.</p>
+          <p><span style ="font-weight: 100;">TWO-WAY SEARCH FUNCTIONALITY</span><br><br>
+            Search by food to discover perfect beverage pairings.<br>
+            Search by alcoholic beverage to find complementary food matches.<br>
+            Tap on basic description cards to access detailed information about each pairing.<br></p>
         </div>
       </div>
-  </section>
-
-  <section id="searching" class="project-section">
-    <div class="split-section">
+      </section>
+      
+      <section id="favs" class="project-section">
+        <div class="split-section">
       <div class="section-left">
         <video autoplay muted loop playsinline width="70%" height="auto">
-          <source src="../../videos/searching_feature.mp4" type="video/mp4">
+          <source src="../../videos/favs2.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
       <div class="section-right">
-        <p><span style ="font-weight: 100;">TWO-WAY SEARCH FUNCTIONALITY</span><br><br>
-          Search by food to discover perfect beverage pairings.<br>
-          Search by alcoholic beverage to find complementary food matches.<br>
-          Tap on basic description cards to access detailed information about each pairing.<br></p>
+        <p><span style ="font-weight: 100;">FAVORITES SECTION</span><br><br>
+          Save your favorite pairings to a dedicated section for easy access, so you
+          can revisit them without losing track.</p>
+      </div>
+        </div>
+      </section>
+      
+      <section id="pairingdict" class="project-section">
+        <div class="split-section">
+      <div class="section-left">
+        <video autoplay muted loop playsinline width="70%" height="auto">
+          <source src="../../videos/pairing_dictionary.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="section-right">
+        <p><span style ="font-weight: 100;">EXPLORABLE PAIRINGS</span><br><br>
+          Browse all pairings freely with sorting options by alcohol type to match your curiosity or preferences.</p>
+      </div>
+        </div>
+      </section>
+      
+      <section id="filter" class="project-section">
+        <div class="split-section">
+      <div class="section-left">
+        <video autoplay muted loop playsinline width="70%" height="auto">
+          <source src="../../videos/v_gf_filter.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="section-right">
+        <p><span style ="font-weight: 100;">DIETARY FILTERS</span><br><br>
+          Optional vegan and gluten-free filters make it easy to find pairings that suit your dietary needs.</p>
+      </div>
+        </div>
+      </section>
+      
+      <hr class="centered-hr">
+      
+      <section id="mvvm" class="project-section">
+        <div class="split-section">
+      <div class="section-left">
+        <img src="../../images/mvvm.jpg" alt="mvvm"/>
+      </div>
+      <div class="section-right">
+        <p style="margin-left: 30px;"><span style ="font-weight: 400; color:rgb(205, 98, 92);">ARCHITECTURE</span><br><br>
+          MVVM (Model-View-ViewModel) was an effective choice for the iOS app and a three-person team due
+          to its clear structure and organization. Each layer—Model, ViewModel, and View—was distinct, preventing
+          overlap in responsibilities and simplifying collaboration. Testing was streamlined, as the separation of logic
+          in the ViewModel from the UI allowed for independent validation. Its compatibility with SwiftUI ensured a
+          responsive and maintainable app design while keeping development efficient and scalable for future enhancements.<br><br>
+          Check out the <a href="https://github.com/RaeClay/flair_pair" target="_blank">code</a>!
+        </p>
+      </div>
+        </div>
+      </section>
+      
+      <hr class="centered-hr">
+      
+      <section id="collab" class="project-section">
+        <div class="split-section">
+      <div class="section-left">
+        <img src="../../images/gitsc.jpg" alt="git1"/>
+      </div>
+      <div class="section-right">
+        <p style="margin-left: 30px;"><span style ="font-weight: 400; color:rgb(205, 98, 92);">COLLABORATION</span><br><br>
+          Over four months, the team collaborated using GitHub to manage the project despite conflicting schedules.
+          Separate branches allowed work to proceed independently, and pull requests helped review and merge code without
+          disrupting progress. Using GitHub’s issue tracking and consistent commits kept the project organized and on track,
+          making development manageable even with limited overlap in availability</p>
+      </div>
+        </div>
+      </section>
+      
+      <hr class="centered-hr">
+      
+      <div id = "FUTURE" class="project-bottom">
+        <div class="column">
+      <p style="padding-bottom: 20px; font-weight: 100">FUTURE ENHANCMENTS</p>
+        <p style = "padding-left: 7%;"> -> Real-time updates via a database API for diverse, more in depth, and accurate pairing recommendations.
+         <br> -> Personalized suggestions based on preferences, seasons, and location.
+         <br> -> Advanced search with filters for dietary needs and pairing themes.
+         <br> -> Gamified challenges and rewards for discovering unique pairings. </p>
+        </div>
+        
+        <div class="column">Any questions?<br><br> <a href="mailto:johnamick3@gmail.com">Shoot me an email!</a></div>
+       
+        <div class="column">
+      <a href="javascript:void(0);" class="back-to-top" onclick="scrollToTop()">
+        Back to the top
+        <i class="material-icons">arrow_upward</i>
+      </a>
+        </div>
       </div>
     </div>
-</section>
-
-<section id="favs" class="project-section">
-  <div class="split-section">
-    <div class="section-left">
-      <video autoplay muted loop playsinline width="70%" height="auto">
-        <source src="../../videos/favs2.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="section-right">
-      <p><span style ="font-weight: 100;">FAVORITES SECTION</span><br><br> 
-        Save your favorite pairings to a dedicated section for easy access, so you 
-        can revisit them without losing track.</p>
-    </div>
-  </div>
-</section>
-
-<section id="pairingdict" class="project-section">
-  <div class="split-section">
-    <div class="section-left">
-      <video autoplay muted loop playsinline width="70%" height="auto">
-        <source src="../../videos/pairing_dictionary.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="section-right">
-      <p><span style ="font-weight: 100;">EXPLORABLE PAIRINGS</span><br><br> 
-        Browse all pairings freely with sorting options by alcohol type to match your curiosity or preferences.</p>
-    </div>
-  </div>
-</section>
-
-<section id="filter" class="project-section">
-  <div class="split-section">
-    <div class="section-left">
-      <video autoplay muted loop playsinline width="70%" height="auto">
-        <source src="../../videos/v_gf_filter.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="section-right">
-      <p><span style ="font-weight: 100;">DIETARY FILTERS</span><br><br> 
-        Optional vegan and gluten-free filters make it easy to find pairings that suit your dietary needs.</p>
-    </div>
-  </div>
-</section>
-
-<hr class="centered-hr">
-
-<section id="mvvm" class="project-section">
-  <div class="split-section">
-    <div class="section-left">
-      <img src="../../images/mvvm.jpg" alt="mvvm"/>
-    </div>
-    <div class="section-right">
-      <p style="margin-left: 30px;"><span style ="font-weight: 400; color:rgb(205, 98, 92);">ARCHITECTURE</span><br><br> 
-        MVVM (Model-View-ViewModel) was an effective choice for the iOS app and a three-person team due 
-        to its clear structure and organization. Each layer—Model, ViewModel, and View—was distinct, preventing 
-        overlap in responsibilities and simplifying collaboration. Testing was streamlined, as the separation of logic 
-        in the ViewModel from the UI allowed for independent validation. Its compatibility with SwiftUI ensured a 
-        responsive and maintainable app design while keeping development efficient and scalable for future enhancements.<br><br>
-        Check out the <a href="https://github.com/RaeClay/flair_pair" target="_blank">code</a>!
-      </p>
-    </div>
-  </div>
-</section>
-
-<hr class="centered-hr">
-
-<section id="collab" class="project-section">
-  <div class="split-section">
-    <div class="section-left">
-      <img src="../../images/gitsc.jpg" alt="git1"/>
-
-    </div>
-    <div class="section-right">
-      <p style="margin-left: 30px;"><span style ="font-weight: 400; color:rgb(205, 98, 92);">COLLABORATION</span><br><br> 
-        Over four months, the team collaborated using GitHub to manage the project despite conflicting schedules. 
-        Separate branches allowed work to proceed independently, and pull requests helped review and merge code without 
-        disrupting progress. Using GitHub’s issue tracking and consistent commits kept the project organized and on track, 
-        making development manageable even with limited overlap in availability</p>
-    </div>
-  </div>
-</section>
-
-<hr class="centered-hr">
-
-<div id = "FUTURE" class="project-bottom">
-  <div class="column">
-    <p style="padding-bottom: 20px; font-weight: 100">FUTURE ENHANCMENTS</p>
-      <p style = "padding-left: 7%;"> -> Real-time updates via a database API for diverse, more in depth, and accurate pairing recommendations.
-       <br> -> Personalized suggestions based on preferences, seasons, and location.
-       <br> -> Advanced search with filters for dietary needs and pairing themes.
-       <br> -> Gamified challenges and rewards for discovering unique pairings. </p>
-  </div>
-  
-  <div class="column">Any questions?<br><br> <a href="mailto:johnamick3@gmail.com">Shoot me an email!</a></div>
- 
-  <div class="column">
-    <a href="javascript:void(0);" class="back-to-top" onclick="scrollToTop()">
-      Back to the top 
-      <i class="material-icons">arrow_upward</i>
-    </a>
-  </div>
-</div>
       <script src="../../script.js"></script>    <!-- SCRIPT -->
 
 </body>
